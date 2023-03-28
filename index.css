@@ -40,7 +40,7 @@ nav>ul>li{
     margin-top: 10px;
     border: none;
 }
-nav>ul>li:nth-child(1){
+nav>ul>li:hover{
     border-bottom: 1px solid rgb(0, 128, 79);
 }
 nav>ul>li>a{
@@ -286,7 +286,7 @@ nav>ul>li>a{
 
 footer{
     width: 100%;
-    height: 80px;
+    height: 180px;
     background: #000;
     color: #fff;
     text-align: center;
@@ -294,6 +294,10 @@ footer{
 }
 footer>p{
     padding: 20px;
+}
+
+.contacts>ul>li{
+    list-style: none;
 }
 
 .meal{
@@ -348,5 +352,78 @@ footer>p{
     color: rgb(0, 128, 79);
 }
 
+@media(max-width:800px){
+    *{
+        overflow-x: hidden;
+    }
+    
+    .header{
+        width: 100%;
+        font-weight: 400;
+    }
+    .header>nav>ul>li{
+        padding: 4px;
+        font-size: 12px;
+        
+    }
+    .right-bar{
+        width: 80%;
+        position: relative;
+        margin-left: 2%;
+    }
+    .center-bar{
+        width: 65%;
+        font-size: 16px;
+        display: none;
+    }
+   
+    
+    #key-value-box{
+        width: 180px;
+        padding: 10px 20px;
+    }
+    .registration{
+    
+        width: 80%;
+        transform: translateX(5%);
+        box-shadow: 0px 2px 4px 1px #ccc;
+        padding: 20px 30px;
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    .registration>img{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .registration>h1{
+        margin: 20px;
+        color: rgb(0, 128, 79);
+    }
+    .registration>form>label{
+        margin: 20px;
+        font-size: 20px;
+        color: #444;
+        font-weight: 600;
+    }
+    .registration>form>input,select{
+        padding: 10px 20px;
+        width: 50%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        margin-left: 20px;
+        margin-top: 10px;
+        border: none;
+        border-bottom: 1px solid rgb(0, 128, 79);
+        background: #f4f4f4;
+        color: #555;
+        outline: none;
+    }
+    footer{
+        width: 100%;
+        height: 200px;
+        text-align: center;
+    }
+}
 
 
