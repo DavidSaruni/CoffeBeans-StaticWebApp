@@ -22,3 +22,10 @@ keybtn.addEventListener('click',()=>{
     keydisp.innerHTML=`<p>${iddate.getFullYear()}${letter_arr[Math.floor(Math.random() * letter_arr.length)]}${iddate.getMonth()+1}${iddate.getDate()}${iddate.getHours()}${iddate.getMinutes()}${iddate.getSeconds()}</p>`
 })
 
+//scroll to registration form button
+const scrollbtn=document.getElementById('scroll-btn')
+scrollbtn.addEventListener('click',()=>{
+    let regContainer=document.getElementById('reg-container')
+    regContainer.scrollIntoView()//scrolls to the registration form
+})
+
