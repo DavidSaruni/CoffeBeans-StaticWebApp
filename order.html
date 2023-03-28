@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Belljar Morning is a restraunt situated in Nairobi that serves high quality mixed coffee flavors and offers the best Kenyan comfort food.">
+    <meta name="keywords" content="coffee, coffee shop in nairobi,belljar,morning, restraunt,cafe,kenya comfort food,comfort food,kenya,cup of joe,black coffee,cappuccino,espresso,mocha,latte,cortado,doppio">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Coffee Beans Hub</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/912e452282.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        
+        <h1 id="header-title"> <img src="icon-white.png" alt="" class="icon"> Coffee Beans Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="order.html"><i class="fa fa-receipt"></i> <i class="fa fa-mug-saucer"></i> Make an Order</a></li>
+                <li><a href="blog.html"><i class="fa fa-newspaper"></i> Blog</a></li>
+                <li><a href="events.html"><i class="fa fa-cocktail"></i> Ticket</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    
+   
+    <div class="registration order-form" id="order-frm">
+        <img src="images/pic2.jpg" alt="">
+        <h1>Order Request</h1>
+        <div class="info-gray">
+            <p>
+            <i class="fa-solid fa-pencil"></i>
+            Welcome to the order page. Please use this form to make your order.
+        </p>
+    </div>
+
+            
+        
+        <form>
+            <label for="name">Key</label>
+            <br>
+            <input type="text" name="name" id="name" placeholder="type generated key">
+            <br>
+            <br>
+            <label for="size">How many people</label>
+            <br>
+           <input type="number" name="size" id="size" placeholder="0">
+            <br>
+            <br>
+            <label for="tablenum">Table Number  (Room Code + Table Code)</label>
+            <br>
+            <label for="code">Room Code</label>
+            <select name="code" id="code">
+                <option value="AT45">AT45</option>
+                <option value="RMiCOP 234">RMiCOP 234</option>
+                <option value="AT12">AT12</option>
+                <option value="RF-TP23">RF-TP23</option>
+            </select>
+            <input type="tel" name="text" id="tablenum" placeholder="table code e.g. R-T001">
+            <br>
+            <br>
+            <label for="tblorder">Place Order Here</label>
+            <br>
+            <input type="text" name="order" id="tblorder" placeholder="e.g 2 - Chicken Teriyaki, Noodles">
+            <br>
+            <br>
+            <label>Time</label>
+            <br>
+            <input type="checkbox" id="morning" value="morning">
+            Morning
+            <br>
+            <br>
+            <input type="checkbox" id="afternoon" value="afternoon">
+            Afternoon
+            <br>
+            <br>
+            <input type="checkbox" id="evening" value="evening">
+            Evening
+            <br>
+            <br>
+            
+
+            
+        </form>
+        <button class="btn-primary submit" id="sbt-btn">Submit Order</button>
+    </div>
+
+    
+
+    <div class="order-successfull" id="order-box"></div>
+
+
+    
+
+<script>
+    let key=document.getElementById('name');
+    let people=document.getElementById('size');
+    let rId=document.getElementById('code');
+    let tblNumber=document.getElementById('tablenum');
+    let order=document.getElementById('tblorder');
+    let date=new Date();
+    const orderForm=document.getElementById('order-frm');
+    const disp=document.getElementById('order-box');
+
+    const orderBtn=document.getElementById('sbt-btn');
+    orderBtn.addEventListener('click',()=>{
+        //values
+        key_val=key.value;
+        size=people.value;
+        room_id=rId.value;
+        table_no=tblNumber.value;
+        tbl_food_order=order.value;
+
+        orderForm.style.display='none';
+
+        disp.innerHTML=`
+        <h2><i class="fa fa-receipt"></i> Order: ${room_id}:${table_no}</h2>
+        <div class="info-gray">
+        <p> <i class="fa fa-circle-exclamation"></i> Successfully requested at ${date.getDate()}-${date.getMonth()+1}-${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}</p>
+        </div>
+        <p>Your Requested Order</p>
+        <p>${tbl_food_order}</p>
+        `;
+
+        disp.style.display='block';
+        
+    })
+</script>
+<script src="index.js"></script>    
+</body>
+</html>

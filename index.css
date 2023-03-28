@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap');
+*{
+    margin: 0;
+}
+
+/*My fonts*/
+/*
+font-family: 'Climate Crisis', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Tilt Warp', cursive;
+*/
+html{
+    scroll-behavior: smooth;
+}
+.header>h1{font-family: 'Tilt Warp', cursive;}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    width: 100%;
+    height: 120px;
+    background-color: #000;
+    
+}
+.icon{
+    height: 50px;
+    width: 45px;
+    margin-left: 5%;
+    display: inline;
+}
+nav>ul{
+    margin-top: 10px;
+}
+nav>ul>li{
+    display: inline;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+}
+nav>ul>li:nth-child(1){
+    border-bottom: 1px solid rgb(0, 128, 79);
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+#header-title{
+    color: #fff;
+}
+
+
+.center-bar{
+    color: #333;
+    width: 54%;
+    margin-left: 10%;
+    margin-top: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+.center-bar>h1{
+    
+    font-family: 'Tilt Warp', cursive;
+}
+.right-bar{
+   width: 250px;
+   /*height: 550px;*/
+   padding: 20px;
+   margin-top: 2%;
+   margin-left: 70%;
+   position: absolute;
+   /*box-shadow: 0px 4px 6px 0px #ccc;*/
+   color: #333;
+   text-align: center;
+}
+.ticket{
+    font-size: 80px;
+    color: 555;
+    text-align: center;
+}
+.fa-ticket{
+    color: rgb(209, 132, 15);
+}
+
+
+.fa-receipt{
+    color: rgb(22, 139, 94);
+}
+.fa-shop{
+    color: rgb(40, 226, 148);
+}
+.fa-newspaper{
+    color: rgb(22, 153, 120);
+}
+
+.slideshow-container{
+    display: none;
+    margin-top: 4%;
+    height: 300px;
+    width: 100%;
+    z-index: 1;
+}
+.slideshow-container>img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text{
+    height: 220px;
+    width: 400px;
+    color: #fff;
+    background-color: #000000a1;
+    position: absolute;
+    border: none;
+    margin-top: -280px;
+    padding: 10px 20px;
+}
+.text>p{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.text>button{
+    border: none;
+    background-color: rgb(22, 139, 94);
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.text>button:hover{
+    background-color: rgb(22, 153, 120);
+}
+
+.content{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    background-image: url('images/leafs.png');
+    background-repeat: no-repeat;
+    background-size: 100% 400px;
+    padding: 10px;
+    color: #333;
+}
+.content>button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(22, 139, 94);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+.btn-primary{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(22, 139, 94);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 5%;
+}
+.btn-primary:hover{
+    background-color: rgb(22, 153, 120);
+}
+
+.event{
+    padding: 20px;
+    border-left: 5px solid #ccc;
+    transition: ease-in-out 1s;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.image>{
+    height: 200px;
+    width: 100%;
+}
+.image>img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.event:hover{
+    border-left: 5px solid rgb(22, 153, 120);
+}
+.small{
+    color: #555;
+}
+
+.registration{
+    
+    width: 60%;
+    transform: translateX(25%);
+    box-shadow: 0px 2px 4px 1px #ccc;
+    padding: 20px 30px;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+.registration>img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.registration>h1{
+    margin: 20px;
+    color: rgb(0, 128, 79);
+}
+.registration>form>label{
+    margin: 20px;
+    font-size: 20px;
+    color: #444;
+    font-weight: 600;
+}
+.registration>form>input,select{
+    padding: 10px 20px;
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 128, 79);
+    background: #f4f4f4;
+    color: #555;
+    outline: none;
+}
+#code{
+    width: 200px;
+}
+#phone{
+    width: 250px;
+}
+#tablenum{
+    width: 250px;
+}
+.info-gray{
+    color: #555;
+    font-size: 14px;
+    margin: 20px;
+}
+.registration>form>button{
+    margin-left: 20px;
+}
+.submit{
+    width: 50%;
+    transform: translateX(50%);
+    font-weight: 500;
+    border-radius: 25px;
+}
+.gen{
+    font-weight: 500;
+    border-radius: 5px;
+}
+#key-value-box{
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: rgb(0, 128, 79);
+    font-weight: 600;
+    height: 20px;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.key-box{
+    margin: 20px;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+}
+footer>p{
+    padding: 20px;
+}
+
+.meal{
+    
+    width: 100%;
+    margin-top: 30px;
+    font-weight: 800;
+    border: 1px solid #ccc;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top: 10px solid rgb(238, 102, 12);
+    margin-bottom: 20px;
+}
+.meal>img{
+    height: 130px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.price{
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    width: 100%;
+    background-color: rgb(238, 102, 12);
+}
+.price:hover{
+    background-color: orange;
+}
+
+.smaller{
+    font-weight: 400;
+}
+
+.order-form{
+    margin-top: 20px;
+}
+
+.order-successfull{
+    display: none;
+    width: 60%;
+    transform: translateX(25%);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 20px;
+
+}
+.order-successfull>h2{
+    color: rgb(0, 128, 79);
+}
+
+
+
