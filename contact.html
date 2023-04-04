@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Belljar Morning is a restraunt situated in Nairobi that serves high quality mixed coffee flavors and offers the best Kenyan comfort food.">
+    <meta name="keywords" content="coffee, coffee shop in nairobi,belljar,morning, restraunt,cafe,kenya comfort food,comfort food,kenya,cup of joe,black coffee,cappuccino,espresso,mocha,latte,cortado,doppio">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Coffee Beans Hub</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/912e452282.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        
+        <h1 id="header-title"> <img src="icon-white.png" alt="" class="icon"> Coffee Beans Hub</h1>
+        <nav>
+            <ul>
+                
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="blog.html"><i class="fa fa-newspaper"></i> Blog</a></li>
+                <li><a href="events.html"><i class="fa fa-cocktail"></i> Ticket</a></li>
+                <li><a href="contact.html"><i class="fa fa-address-book"></i> Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    
+   
+    <div class="registration order-form" id="order-frm">
+        <img src="images/pic2.jpg" alt="">
+        <h1>Contact Us</h1>
+        <div class="info-gray">
+            <p>
+            <i class="fa-solid fa-pencil"></i>
+            Welcome to the customer request page. Please use this form to make your request and suggestions.
+        </p>
+    </div>
+
+            
+        
+        <form id="contactFrm">
+            <label for="key">Key</label>
+            <br>
+            <input type="text" name="key" id="key" placeholder="type generated key">
+            <div class="msg success" id="msg-correct-name"></div>
+            <div class="msg fail" id="msg-wrong-name"></div>
+            <br>
+            <br>
+            <br>
+            <label for="tablenum">Table Number  (Room Code + Table Code)</label>
+            <br>
+            <label for="code">Room Code</label>
+            <select name="code" id="code">
+                <option value="None">None</option>
+                <option value="AT45">AT45</option>
+                <option value="RMiCOP 234">RMiCOP 234</option>
+                <option value="AT12">AT12</option>
+                <option value="RF-TP23">RF-TP23</option>
+            </select>
+            <input type="text" name="text" id="tablenum" placeholder="table code e.g. R-T001">
+            <br>
+            <div class="msg success" id="msg-correct-code"></div>
+            <div class="msg fail" id="msg-wrong-code"></div>
+            <div class="msg success" id="msg-correct-tbl"></div>
+            <div class="msg fail" id="msg-wrong-tbl"></div>
+            <br>
+            <label for="message">Message</label>
+            <br>
+           <textarea name="message" id="message" cols="30" rows="10" placeholder="Input message"></textarea>
+           <div class="msg success" id="msg-correct-msg"></div>
+            <div class="msg fail" id="msg-wrong-msg"></div>
+            <br>
+            <button class="btn-primary submit" type="submit" id="sbt-btn">Submit Request</button>
+            
+        </form>
+        
+    </div>
+
+    
+
+    
+
+
+<script>
+   let keymsg_green=document.getElementById('msg-correct-name');
+   let keymsg_red=document.getElementById('msg-wrong-name');
+   let codemsg_green=document.getElementById('msg-correct-code');
+   let codemsg_red=document.getElementById('msg-wrong-code');
+   let tblmsg_green=document.getElementById('msg-correct-tbl');
+   let tblmsg_red=document.getElementById('msg-wrong-tbl');
+   let msg_green=document.getElementById('msg-correct-msg');
+   let msg_red=document.getElementById('msg-wrong-msg');
+     //FROM VALIDATION
+  const frm=document.getElementById('contactFrm');
+  frm.addEventListener('submit',(e)=>{
+      e.preventDefault();
+  
+      //get the box inputs
+      keyinput=frm.key.value;
+      codeinput=frm.code.value;
+      tblinput=frm.tablenum.value;
+      msginput=frm.message.value;
+  
+      //check for values
+      //key
+      if(keyinput==""){
+        keymsg_red.innerHTML='<p> <i class="fa-solid fa-circle-exclamation"></i> Please enter valid key.</p>';
+        keymsg_red.style.display='block';
+        keymsg_green.style.display='none';
+      }
+      else {
+        keymsg_green.innerHTML='<p> <i class="fa-solid fa-circle-check"></i> Your key is valid.</p>';
+        keymsg_green.style.display='block';
+        keymsg_red.style.display='none';
+      }
+
+      //code
+      if(codeinput=="None"){
+        codemsg_red.innerHTML='<p> <i class="fa-solid fa-circle-exclamation"></i> Kinly choose a room code.</p>';
+        codemsg_red.style.display='block';
+        codemsg_green.style.display='none';
+      }
+      else {
+        codemsg_green.innerHTML='<p> <i class="fa-solid fa-circle-check"></i> Valid room code recognized.</p>';
+        codemsg_green.style.display='block';
+        codemsg_red.style.display='none';
+      }
+
+      //table number
+      if(tblinput=="")
+      {
+        tblmsg_red.innerHTML='<p> <i class="fa-solid fa-circle-exclamation"></i> Please input table code.</p>';
+        tblmsg_red.style.display='block';
+        tblmsg_green.style.display='none';
+      }
+      else {
+        tblmsg_green.innerHTML='<p> <i class="fa-solid fa-circle-check"></i> Acceptable table code.</p>';
+        tblmsg_green.style.display='block';
+        tblmsg_red.style.display='none';
+      }
+
+      //message
+      if(msginput==""){
+        msg_red.innerHTML='<p> <i class="fa-solid fa-circle-exclamation"></i> You musn\'t send a blank message.</p>';
+        msg_red.style.display='block';
+        msg_green.style.display='none';
+    }
+      else{
+         msg_green.innerHTML='<p> <i class="fa-solid fa-circle-check"></i> Message is accepted.</p>';
+         msg_green.style.display='block';
+         msg_red.style.display='none';
+    }
+
+
+  });
+</script>
+<script src="index.js"></script>    
+</body>
+</html>

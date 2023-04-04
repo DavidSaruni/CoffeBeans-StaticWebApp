@@ -242,6 +242,19 @@ nav>ul>li>a{
     color: #555;
     outline: none;
 }
+textarea{
+    padding: 10px 20px;
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 128, 79);
+    background: #f4f4f4;
+    color: #555;
+    outline: none;
+}
 #code{
     width: 200px;
 }
@@ -352,6 +365,21 @@ footer>p{
     color: rgb(0, 128, 79);
 }
 
+/*validation messages*/
+.msg{
+    width: 100%;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.success{
+    color: rgb(22, 139, 94);
+    font-weight: 600;
+}
+.fail{
+    color: rgb(196, 19, 19);
+    font-weight: 600;
+}
+
 @media(max-width:800px){
     *{
         overflow-x: hidden;
@@ -424,6 +452,7 @@ footer>p{
         height: 200px;
         text-align: center;
     }
+
 }
 
 

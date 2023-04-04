@@ -1,4 +1,4 @@
-
+//slide show
 let index=0;
 function slideShow(){
     let slide= document.getElementsByClassName('slideshow-container');
@@ -28,4 +28,6 @@ scrollbtn.addEventListener('click',()=>{
     let regContainer=document.getElementById('reg-container')
     regContainer.scrollIntoView()//scrolls to the registration form
 })
+
+ 
 
