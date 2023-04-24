@@ -1,5 +1,9 @@
 # Coffee Beans Hub
 URL: https://agreeable-pond-09c0a5d10.2.azurestaticapps.net/index.html
+<br>
+Alternative URL:
+https://bucolic-marzipan-efaba6.netlify.app/
+<br>
 ## Developers meeting arena
 ### Version 1.0.0
 Coffee Beans is a fictional coffee shop brand that serves the purpose of bringing developers together through meals.
